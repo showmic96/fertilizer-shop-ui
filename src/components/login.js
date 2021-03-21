@@ -20,7 +20,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+        showmic96
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -62,9 +62,9 @@ export default function SignIn() {
     };
 
     axios
-      .post("http://localhost:2000/loginUser", loginData)
+      .post("http://localhost:2000/login", loginData)
       .then((resposne) => {
-        history.push("/dashboard");
+        history.push("/main-menu");
       })
       .catch((error) => {
         console.log(error);
@@ -78,7 +78,7 @@ export default function SignIn() {
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar>
-        <Typography component="h1" variant="h5">
+        <Typography style={{fontSize: '20px'}}>
           Sign in
         </Typography>
         <form className={classes.form} noValidate>
@@ -131,7 +131,7 @@ export default function SignIn() {
               </Link>
             </Grid>
             <Grid item>
-              <Link href="/signUp" variant="body2">
+              <Link href="/sign-up" variant="body2">
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>

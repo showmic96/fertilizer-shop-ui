@@ -68,9 +68,9 @@ export default function SignUp() {
       role: "employee",
     };
 
-    axios.post("http://localhost:2000/addUser", userCreateData)
+    axios.post("http://localhost:2000/add-user", userCreateData)
       .then((response) => {
-        history.push('/login')
+        history.push('/')
       })
       .catch((error) => {
         console.log(error);
@@ -84,7 +84,7 @@ export default function SignUp() {
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar>
-        <Typography component="h1" variant="h5">
+        <Typography style={{ fontSize: '20px' }}>
           Sign up
         </Typography>
         <form className={classes.form} noValidate>

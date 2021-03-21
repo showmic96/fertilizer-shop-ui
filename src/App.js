@@ -3,15 +3,17 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Login from "./components/login";
 import SignUp from "./components/sign-up";
 import Dashboard from "./components/dashboard";
-import createAllotment from "./components/create-allotment";
+import CreateAllotment from "./components/create-allotment";
+import MainMenu from "./components/main-menu";
 
 function App() {
   return (
     <BrowserRouter>
       <Route path="/" component={Login} exact />
-      <Route path="/signUp" component={SignUp} />
+      <Route path="/sign-up" component={SignUp} />
+      <Route path="/main-menu" component={MainMenu} />
       <Route path="/dashboard" component={Dashboard} />
-      <Route path="/createAllotment" component={createAllotment} />
+      <Route path="/allotment-creation" component={CreateAllotment} />
     </BrowserRouter>
   );
 }
